@@ -253,14 +253,21 @@
             console.log(user)
 
 
-            $.ajax({
-                url: "/api/friends",
-                method: "POST"
-            }).done(function (response) {
-                console.log(response);
+            $.post("/api/friends", user,
+                function(data) {
 
-                $(".modal").modal("show");
-            });
+                    console.log(data)
+            
+                });
+            // $.ajax({
+            //     url: "/api/friends",
+            //     method: "POST",
+            //     data:user
+            // }).done(function (response) {
+            //     console.log(response);
+
+            //     $(".modal").modal("show");
+            // });
 
 
 
