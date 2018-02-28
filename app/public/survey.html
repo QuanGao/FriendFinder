@@ -76,7 +76,7 @@
             </select>
             <br>
 
-            <!-- <h2>
+            <h2>
                 <strong>Question 3</strong>
             </h2>
             <label for="question3">How would you like to spend your spare time?</label>
@@ -91,7 +91,7 @@
             </select>
             <br>
 
-            <h2>
+            <!-- <h2>
                 <strong>Question 4</strong>
             </h2>
             <label for="question3">How would you like to spend your spare time?</label>
@@ -240,37 +240,49 @@
     $(document).ready(function () {
 
         $("#submitSurvy").on("click", function (event) {
+
             event.preventDefault();
             
-            let user = {};
-            user.name = $("#inputName").val().trim();
-            user.photos = $("#inputPhoto").val().trim();
+            let user = {
+                name: $("#inputName").val().trim(),
+                photos: $("#inputPhoto").val().trim()
+            };
+
             user.scores = [];
-            for (let i = 1; i <=2; i++) {
+
+            for (let i = 1; i <=3; i++) {
                 let score = $(`#question${i} option:selected`).text();
                 user.scores.push(score.split(" ")[0]);       
             }
-            console.log(user)
 
 
-            $.post("/api/friends", user,
-                function(data) {
+            function sumAbs(arr1, arr2) {
+                let sum = 0;
+                for(let i=0; i<arr1.length; i++){
+                    sum+= Math.abs(+arr1[i] - +arr2[i]);
+                }
+                return sum;
+            }
 
-                    console.log(data)
-            
+            $.get("/api/friends", function (data) {
+                console.log(user.scores);
+
+                console.log(data);
+                let BFF = data.reduce((a,b)=>{
+                    return sumAbs(a.scores, user.scores) < sumAbs(b.scores, user.scores) ? a:b;
+                })
+                console.log(BFF)
+
+            })
+            $.post("/api/friends", user, function(data) {
+                    if(data){
+                        console.log(data);
+                        $(".modal").modal("show");
+                    } else {
+                        console.log("not suceefull")
+                    }        
                 });
-            // $.ajax({
-            //     url: "/api/friends",
-            //     method: "POST",
-            //     data:user
-            // }).done(function (response) {
-            //     console.log(response);
-
-            //     $(".modal").modal("show");
-            // });
-
-
-
+            
            
         })
 
