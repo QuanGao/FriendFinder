@@ -6,7 +6,7 @@ const bodyParser = require("body-parser");
 const apiRoutes = require("./app/routing/apiRoutes");
 const htmlRoutes = require("./app/routing/htmlRoutes");
 
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 apiRoutes(app);

@@ -251,7 +251,7 @@
             user.scores = [];
 
             for (let i = 1; i <=3; i++) {
-                let score = $(`#question${i} option:selected`).text();
+                let score = $(`#question${i} option:selected`).text().trim();
                 user.scores.push(score.split(" ")[0]);       
             }
 
@@ -266,22 +266,28 @@
 
             $.get("/api/friends", function (data) {
                 console.log(user.scores);
-
                 console.log(data);
-                let BFF = data.reduce((a,b)=>{
+                let bff = data.reduce((a,b)=>{
                     return sumAbs(a.scores, user.scores) < sumAbs(b.scores, user.scores) ? a:b;
                 })
-                console.log(BFF)
+                console.log(bff)
 
-            })
-            $.post("/api/friends", user, function(data) {
+                $(".bestMatch-name").text(bff.name);
+
+                $(".bestMatch-img").html(`<img src=${bff.photos}></img>`) 
+
+                $.post("/api/friends", user, function(data) {
                     if(data){
                         console.log(data);
                         $(".modal").modal("show");
                     } else {
                         console.log("not suceefull")
                     }        
-                });
+                });     
+
+            })
+
+           
             
            
         })
