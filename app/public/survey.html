@@ -245,6 +245,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
 <script>
+    
     $(document).ready(function () {
 
         $("#submitSurvy").on("click", function (event) {
@@ -252,6 +253,13 @@
             event.preventDefault();
 
             let isComplete = true;
+            function sumAbs(arr1, arr2) {
+                let sum = 0;
+                for (let i = 0; i < arr1.length; i++) {
+                    sum += Math.abs(+arr1[i] - +arr2[i]);
+                };
+                return sum;
+            }
 
             $("input").each(function () {
                 if (!$(this).val()) {
@@ -261,11 +269,11 @@
 
             let user = {
                 name: $("#inputName").val().trim(),
-                photos: $("#inputPhoto").val().trim()
+                photos: $("#inputPhoto").val().trim(),
+                uniqid: Date.now()
             };
 
             user.scores = [];
-
             $("select").each(function () {
                 let score = $(this).val();
                 if (!score) {
@@ -275,37 +283,22 @@
                 }
             })
 
-            function sumAbs(arr1, arr2) {
-                let sum = 0;
-                for (let i = 0; i < arr1.length; i++) {
-                    sum += Math.abs(+arr1[i] - +arr2[i]);
-                }
-                return sum;
-            }
-
             if (!isComplete) {
                 alert("Please fill out all questions!");
             } else {
                 $.get("/api/friends", function (data) {
-                    console.log(user.scores);
-                    console.log(data);
                     let bff = data.reduce((a, b) => {
                         return sumAbs(a.scores, user.scores) < sumAbs(b.scores, user.scores) ?
                             a : b;
                     })
-                    console.log(bff)
 
                     $(".bestMatch-name").text(bff.name);
-
                     $(".bestMatch-img").html(`<img src=${bff.photos}></img>`)
 
                     $.post("/api/friends", user, function (data) {
                         if (data) {
-                            console.log(data);
                             $("#result").modal("show");
-                        } else {
-                            console.log("not suceefull")
-                        }
+                        } 
                     });
 
                 })
