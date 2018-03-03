@@ -1,24 +1,29 @@
 let friendsArr = [
     {
-        name: "Hello Kitty",
-        // photos: "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAq7AAAAJDAwYzI4NTQ4LWYwZWUtNGFkYS1hNTYwLTZjYzkwY2ViZDA3OA.jpg",
-        photos: "https://pbs.twimg.com/profile_images/691785039043022849/oWsy8LNR.jpg",
-        // photos: "http://behindthethrills.com/wp-content/uploads/2015/06/Hello_Kitty_logo.svg_.png"
-        // scores: [1,1,1,1,1,1,1,1,1,1]
-        scores: [1,1,1]
+        name: "Sailor moon",
+        photos: "https://dw9to29mmj727.cloudfront.net/properties/2016/432-SeriesThumbnails_SM__400x320.jpg",
+        scores: [1,1,1,1,1,1,1,1,1,1]
     },
     {
-        name: "Jacob",
-        photos: "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAq7AAAAJDAwYzI4NTQ4LWYwZWUtNGFkYS1hNTYwLTZjYzkwY2ViZDA3OA.jpg",
-        // scores: [5,5,5,5,5,5,5,5,5,5]
-        scores: [5,5,5]
+        name: "Sherlock Holmes",
+        photos: "http://images4.fanpop.com/image/photos/15500000/Cute-Sherlock-and-Watson-sherlock-15536981-385-239.jpg",
+        scores: [2,2,2,2,2,2,2,2,2,2]
     },
     {
-        name: "Jeremy",
-        photos: "https://avatars2.githubusercontent.com/u/8504998?v=3&s=460",
-        // scores: [3,3,3,3,3,3,3,3,3,3]
-        scores: [3,3,3]
+        name: "",
+        photos: "",
+        scores: [3,3,3,3,3,3,3,3,3,3]
     },
+    {
+        name: "",
+        photos: "",
+        scores: [4,4,4,4,4,4,4,4,4,4]
+    },
+    {
+        name: "Naruto",
+        photos: "https://orig00.deviantart.net/3a9c/f/2012/191/c/d/naruto_cute_by_tania15-d56p6av.jpg",
+        scores: [5,5,5,5,5,5,5,5,5,5]
+    }
 ]
 
 module.exports = friendsArr;
