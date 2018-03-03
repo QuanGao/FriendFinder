@@ -8,6 +8,7 @@ const htmlRoutes = require("./app/routing/htmlRoutes");
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(express.static("./app/public"));
 
 apiRoutes(app);
 htmlRoutes(app);
