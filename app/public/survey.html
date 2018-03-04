@@ -7,13 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="https://bootswatch.com/4/minty/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Indie+Flower" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/app.css">
     <title>FriendFinder_survey</title>
 </head>
 
 <body>
-    <div class="container-fluid">
+    <div class="container-fluid content">
+        <img src="./assets/images/flower copy.jpg" id="bg" alt="flowers">
         <br>
         <br>
         <h1>
@@ -24,206 +25,218 @@
             <strong>About You</strong>
         </h2>
         <form>
-        <div class="form-group info">
-            <label>Name (Required)</label>
-            <input class="form-control" id="inputName" name = "name">
+            <div class="form-group info">
+                <label>Name (Required)</label>
+                <input class="form-control" id="inputName" name="name">
+                <br>
+                <label for="exampleInputPassword1">Link to Photo Image (Required)</label>
+                <input class="form-control" id="inputPhoto" name="photoURL">
+            </div>
+            <hr class="my-4">
             <br>
-            <label for="exampleInputPassword1">Link to Photo Image (Required)</label>
-            <input class="form-control" id="inputPhoto" name = "photoURL">
-        </div>
-        <hr class="my-4"><br>
-        <div class="form-group questions">
+            <div class="form-group questions">
 
-            <h2>
-                <strong>Question 1</strong>
-            </h2>
-            <label for="question1">Your ideal Friday night is chilling with a couple of close friends playing board games</label>
-            <br>
-            <select class="form-control" name="question1">
-                <option value="">Select an Option </option>
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
-            </select>
-            <br><br>
+                <h2>
+                    <strong>Question 1</strong>
+                </h2>
+                <label for="question1">Your ideal Friday night is chilling with a couple of close friends playing board games</label>
+                <br>
+                <select class="form-control" name="question1">
+                    <option value="">Select an Option </option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <br>
+                <br>
 
-            <h2>
-                <strong>Question 2</strong>
-            </h2>
-            <label for="question2">You appreciate the beauty of nature but you prefer the comfort of staying indoors</label>
-            <br>
-            <select class="form-control" name="question2">
-                <option value="">Select an Option </option>
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
-            </select>
-            <br><br> 
+                <h2>
+                    <strong>Question 2</strong>
+                </h2>
+                <label for="question2">You appreciate the beauty of nature but you prefer the comfort of staying indoors</label>
+                <br>
+                <select class="form-control" name="question2">
+                    <option value="">Select an Option </option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <br>
+                <br>
 
-            <h2>
-                <strong>Question 3</strong>
-            </h2>
-            <label for="question3">Your can't live without coffee and a healthy dose of sarcasm on a daily basis</label>
-            <br>
-            <select class="form-control" name="question3">
-                <option value="">Select an Option </option>
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
-            </select>
-            <br><br>
+                <h2>
+                    <strong>Question 3</strong>
+                </h2>
+                <label for="question3">Your can't live without coffee and a healthy dose of sarcasm on a daily basis</label>
+                <br>
+                <select class="form-control" name="question3">
+                    <option value="">Select an Option </option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <br>
+                <br>
 
-            <h2>
-                <strong>Question 4</strong>
-            </h2>
-            <label for="question3">Your friends would describe you as free spirited and funny</label>
-            <br>
-            <select class="form-control" name="question4">
-                <option value="">Select an Option </option>
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
-            </select>
-            <br><br>
+                <h2>
+                    <strong>Question 4</strong>
+                </h2>
+                <label for="question3">Your friends would describe you as free spirited and funny</label>
+                <br>
+                <select class="form-control" name="question4">
+                    <option value="">Select an Option </option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <br>
+                <br>
 
-            <h2>
-                <strong>Question 5</strong>
-            </h2>
-            <label for="question5">You don't remember the last time you went to gym</label>
-            <br>
-            <select class="form-control" name="question5">
-                <option value="">Select an Option </option>
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
-            </select>
-            <br><br>
+                <h2>
+                    <strong>Question 5</strong>
+                </h2>
+                <label for="question5">You don't remember the last time you went to gym</label>
+                <br>
+                <select class="form-control" name="question5">
+                    <option value="">Select an Option </option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <br>
+                <br>
 
-            <h2>
-                <strong>Question 6</strong>
-            </h2>
-            <label for="question6">You believe the best in people, sometimes</label>
-            <br>
-            <select class="form-control" name="question6">
-                <option value="">Select an Option </option>
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
-            </select>
-            <br><br>
+                <h2>
+                    <strong>Question 6</strong>
+                </h2>
+                <label for="question6">You believe the best in people, sometimes</label>
+                <br>
+                <select class="form-control" name="question6">
+                    <option value="">Select an Option </option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <br>
+                <br>
 
-            <h2>
-                <strong>Question 7</strong>
-            </h2>
-            <label for="question7">You prefer sci-fi/action movies over romantic comedies</label>
-            <br>
-            <select class="form-control" name="question7">
-                <option value="">Select an Option </option>
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
-            </select>
-            <br><br>
+                <h2>
+                    <strong>Question 7</strong>
+                </h2>
+                <label for="question7">You prefer sci-fi/action movies over romantic comedies</label>
+                <br>
+                <select class="form-control" name="question7">
+                    <option value="">Select an Option </option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <br>
+                <br>
 
-            <h2>
-                <strong>Question 8</strong>
-            </h2>
-            <label for="question8">If you witnessed your friend being bullied, you would punch the bully back without hesitation</label>
-            <br>
-            <select class="form-control" name="question8">
-                <option value="">Select an Option </option>
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
-            </select>
-            <br><br>
+                <h2>
+                    <strong>Question 8</strong>
+                </h2>
+                <label for="question8">If you witnessed your friend being bullied, you would punch the bully back without hesitation</label>
+                <br>
+                <select class="form-control" name="question8">
+                    <option value="">Select an Option </option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <br>
+                <br>
 
-            <h2>
-                <strong>Question 9</strong>
-            </h2>
-            <label for="question9">You watch your favorite show/movies many times</label>
-            <br>
-            <select class="form-control" name="question9">
-                <option value="">Select an Option </option>
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
-            </select>
-            <br><br>
+                <h2>
+                    <strong>Question 9</strong>
+                </h2>
+                <label for="question9">You watch your favorite show/movies many times</label>
+                <br>
+                <select class="form-control" name="question9">
+                    <option value="">Select an Option </option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <br>
+                <br>
 
-            <h2>
-                <strong>Question 10</strong>
-            </h2>
-            <label for="question10">You wouldn't believe what come out of your own mouth sometimes</label>
-            <br>
-            <select class="form-control" name="question10">
-                <option value="">Select an Option </option>
-                <option value="1">1 (Strongly Disagree)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5 (Strongly Agree)</option>
-            </select>
-            <br><br>
-        </div>
-    </form>
-            <button id="submitSurvy" class="btn btn-primary btn-lg btn-block">Submit</button>
-            <hr>
-            <footer>
-                <div>
-                    <p>
-                        <a href="/api/friends">API friends list </a>|
-                        <a href="https://github.com/QuanGao/FriendFinder"> GitHub Repo</a>
-                    </p>
+                <h2>
+                    <strong>Question 10</strong>
+                </h2>
+                <label for="question10">You wouldn't believe what come out of your own mouth sometimes</label>
+                <br>
+                <select class="form-control" name="question10">
+                    <option value="">Select an Option </option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <br>
+                <br>
+            </div>
+        </form>
+        <button id="submitSurvy" class="btn btn-primary btn-lg">Submit</button>
+        <hr>
+        <footer>
+            <div>
+                <p>
+                    <a href="/api/friends">API friends list </a>|
+                    <a href="https://github.com/QuanGao/FriendFinder"> GitHub Repo</a>
+                </p>
+            </div>
+        </footer>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="modal" id="result">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Best Match</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-            </footer>
-        </div>
-        <br>
-        <br>
-        <br>
-        <br>
-
-        <div class="modal" id="result">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Best Match</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="bestMatch-name"></div>
-                        <div class="bestMatch-img"></div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
+                <div class="modal-body">
+                    <div class="bestMatch-name"></div>
+                    <div class="bestMatch-img"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
+    </div>
 
 </body>
 <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
 <script src="./assets/javascript/logic.js"></script>
+
 </html>

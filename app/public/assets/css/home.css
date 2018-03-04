@@ -13,30 +13,26 @@ body {
 }
 
 .content {
-    max-width: 50%;
+    width: 40%;
+    margin: auto;
 }
 
-h1 {
-    font-size: 36px;
+h1 {  
     color: salmon;
     font-size: 60px;
+    font-family: 'Indie Flower', cursive;
 }
 
-h2 {
-    font-size: 24px;
+h2{
+    color: grey;
+    line-height:  1.8em;
 }
 
-select, input {
-    max-width: 400px;
-    margin: auto;
-}
-
-#submitSurvy {
+#goToSurvey {
     background: lightsalmon;
-    border: lightsalmon;
-    width: 100px;
-    margin: auto;
+    border: lightsalmon
 }
-.modal img {
-    max-width: 450px;
+
+footer {
+    font-size: 20px;
 }
