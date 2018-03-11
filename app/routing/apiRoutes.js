@@ -1,7 +1,13 @@
 
 const friendsData = require("../data/friends");
 
-
+function sumAbs(arr1, arr2) {
+    let sum = 0;
+    for (let i = 0; i < arr1.length; i++) {
+        sum += Math.abs(+arr1[i] - +arr2[i]);
+    };
+    return sum;
+}
 
 module.exports = function (app) {
 
@@ -10,8 +16,12 @@ module.exports = function (app) {
     });
 
     app.post("/api/friends", function(req, res) {
-        friendsData.push(req.body);
+        let bff = friendsData.reduce((a, b) => {
+            return sumAbs(a.scores, req.body.scores) < sumAbs(b.scores, req.body.scores) ? a : b;
+        });
 
-        res.json(true);
+        friendsData.push(req.body);
+        
+        res.json(bff);
     });
 }
